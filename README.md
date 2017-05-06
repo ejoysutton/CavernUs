@@ -1,24 +1,15 @@
-# README
+# CavernUs
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An Angular on Rails app where rockhounds can find mining sites, post on their experiences and plan trips.
 
-Things you may want to cover:
+Heroku Deployment: https://cavernus.herokuapp.com/users/sign_in
 
-* Ruby version
+## Planning Assets
 
-* System dependencies
+Wireframes: https://binocular.mybalsamiq.com/projects/cavernus/CavernUs
+  
+ERD: http://i.imgur.com/oH5MOjC.png?1
+  
+Trello Board: https://trello.com/c/iF0C00Mq/52-starter-tasks-for-baseline
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
