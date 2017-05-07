@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class Api::HoundsController < ApplicationController
   def show
     @posts = @user.posts
   end
@@ -17,8 +17,9 @@ class UserController < ApplicationController
   end
 
   def index
-    @user = current_user
+    # @user = current_user
     @users = User.all
+    render json: @users
   end
 
   def profile

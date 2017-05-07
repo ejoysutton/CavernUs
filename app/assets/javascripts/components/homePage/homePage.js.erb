@@ -12,8 +12,12 @@ function HomePageController($http) {
 
     vm.message = "Let's rock!";
     vm.mines = [];
+    vm.users = [];
 
     $http.get('/api/mines').then(function(resp) {
         vm.mines = resp.data;
+    });
+    $http.get('/api/hounds').then(function(resp) {
+        vm.users = resp.data;
     });
 }
