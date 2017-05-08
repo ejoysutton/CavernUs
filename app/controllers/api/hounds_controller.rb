@@ -4,21 +4,16 @@ class Api::HoundsController < ApplicationController
   end
 
   def edit
-    @user = current_user
+
   end
 
   def update
-    @user = current_user
-    if @user.update(user_update_params)
-      redirect_to user_profile_path
-    else
-      render :edit
-    end
+
   end
 
   def index
     # @user = current_user
-    @users = User.all
+    @users = User.includes(:posts)
     render json: @users
   end
 

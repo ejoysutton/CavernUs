@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
 
   namespace :api do
     resources :mines, only: [:index]
     resources :hounds, only: [:index]
   end
 
+  devise_for :users
   root to: 'client#index'
   get '*path', to: 'client#index'
 
