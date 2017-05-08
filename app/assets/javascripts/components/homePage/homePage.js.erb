@@ -14,12 +14,20 @@ function HomePageController($http) {
     vm.mines = [];
     vm.users = [];
     vm.user = [];
+    vm.posts = [];
 
     $http.get('/api/mines').then(function(resp) {
         vm.mines = resp.data;
     });
-    $http.get('/api/hounds').then(function(resp) {
+    $http.get('/api/users').then(function(resp) {
         vm.users = resp.data;
 //        vm.user = resp.data;
+    });
+    $http.get('/api/users').then(function(resp) {
+        vm.users = resp.data;
+//        vm.user = resp.data;
+    });
+    $http.get('/api/posts').then(function(resp) {
+        vm.posts = resp.data;
     });
 }

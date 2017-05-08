@@ -7,15 +7,44 @@
     Name: {{ mine.name }}
     <br/>
     Description: {{ mine.description }}
+<!--<p ng-repeat="post in $ctrl.posts">-->
+    <!--Posts: {{ post.title }}-->
+<!--</p>-->
 </p>
 
-<p ng-repeat="user in $ctrl.users">
+<div ng-repeat="user in $ctrl.users">
     Name: {{ user.username }}
     <br/>
     Bio: {{ user.bio }}
+    <br/>
+    <p ng-repeat="post in user.posts">
+        {{ post.title }}
+        {{ post.content }}
+    </p>
+</div>
 
-</p>
+<!--{{ $ctrl.users }}<br>-->
 
-{{ $ctrl.users }}
+{{$ctrl.users.posts}}
+<!--{{ $ctrl.posts}}-->
+
+<!--<div ng-repeat="user in $ctrl.users">-->
+    <!--<p ng-repeat="post in user.posts">-->
+        <!--{{ post.title }}-->
+        <!--{{ post.content }}-->
+    <!--</p>-->
+<!--</div>-->
+
+<!--TEMPLATE FOR GETTING JOIN DATA ON FE-->
+<div ng-repeat="user in $ctrl.users">
+    <p>{{ user.username }}</p>
+
+    <p>{{ user.bio }}</p>
+
+    <p ng-repeat="post in user.posts">
+        {{ post.title }}
+        {{ post.content }}
+    </p>
+</div>
 
 

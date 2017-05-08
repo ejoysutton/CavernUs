@@ -1,4 +1,4 @@
-class Api::HoundsController < ApplicationController
+class Api::UsersController < ApplicationController
   def show
     @posts = @user.posts
   end
@@ -13,8 +13,8 @@ class Api::HoundsController < ApplicationController
 
   def index
     # @user = current_user
-    @users = User.includes(:posts)
-    render json: @users
+    @users = User.all
+    render json: @users.to_json(include: :posts)
   end
 
   def profile

@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :mines, only: [:index]
-    resources :hounds, only: [:index]
+    resources :users
+    resources :posts, only: [:index]
   end
 
   devise_for :users
