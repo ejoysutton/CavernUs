@@ -34,6 +34,10 @@ angular
                 url: '/users',
                 component: 'usersPage'
             })
+            .state('userShow', {
+                url: '/user/:userId',
+                component: 'userShowPage'
+            })
             .state('mines', {
                 url: '/mines',
                 component: 'minesPage'

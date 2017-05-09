@@ -1,6 +1,9 @@
 class Api::UsersController < ApplicationController
+  before_action :user_params, only: [:show]
   def show
-    @posts = @user.posts
+    @user = current_user
+    @users = User.all
+    render json: @users.to_json(:include =>  :posts )
   end
 
   def edit

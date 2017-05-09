@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   namespace :api do
-    resources :mines, only: [:index]
+    resources :mines, only: [:index, :show]
     resources :users
     resources :posts, only: [:index]
     resources :trips, only: [:index]

@@ -1,0 +1,31 @@
+angular
+    .module('CavernUs')
+    .component('userShowPage', {
+        templateUrl: '<%= asset_path("components/userShowPage/userShowPage") %>',
+        controller: UserShowPageController
+    });
+
+UserShowPageController.$inject = ['$http'];
+
+function UserShowPageController($http) {
+    var vm = this;
+
+    vm.message = "Let's rock!";
+    vm.mines = [];
+    vm.users = [];
+    vm.posts = [];
+    vm.user = [];
+
+    $http.get('/api/mines').then(function(resp) {
+        vm.mines = resp.data;
+    });
+    $http.get('/api/users').then(function(resp) {
+        vm.users = resp.data;
+    });
+    $http.get('/api/posts').then(function(resp) {
+        vm.posts = resp.data;
+    });
+    $http.get('/api/users/:user_id').then(function(resp) {
+        vm.user = resp.data;
+    });
+}
