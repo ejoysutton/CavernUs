@@ -3,9 +3,8 @@
 <div ng-repeat="trip in $ctrl.trips">
     Description: {{ trip.description }}
     <br/>
-    Description: {{ trip.description }}
     <p ng-repeat="member in trip.trip_members">
-        Posts: {{ member.username }}
+        Notes: {{ member.note }}
     </p>
 </div>
 

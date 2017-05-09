@@ -26,6 +26,6 @@ function TripsPageController($http) {
         vm.posts = resp.data;
     });
     $http.get('/api/trips').then(function(resp) {
-        vm.posts = resp.data;
+        vm.trips = resp.data;
     });
 }
