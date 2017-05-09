@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :mines, only: [:index]
     resources :users
     resources :posts, only: [:index]
+    resources :trips, only: [:index]
   end
 
   devise_for :users

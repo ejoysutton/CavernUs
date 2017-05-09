@@ -1,1 +1,12 @@
 <h1>CavernUs Trips Page</h1>
+
+<div ng-repeat="trip in $ctrl.trips">
+    Description: {{ trip.description }}
+    <br/>
+    Description: {{ trip.description }}
+    <p ng-repeat="member in trip.trip_members">
+        Posts: {{ member.username }}
+    </p>
+</div>
+
+{{ $ctrl.trips }}

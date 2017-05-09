@@ -14,6 +14,16 @@ Mine.delete_all
 Mine.create(id: 1, name: "TestMine", address: "123 Street Rd. Placeville, GA", description: "What a mine! A real mine's mine. I'd mine at this mine and have some stuff that I'd call mine.")
 Mine.create(id: 2, name: "DemoMine", address: "456 Avenue Hwy. New City, FL", description: "We have rocks!")
 
+TripMember.delete_all
+TripMember.create(id: 1, note: "Derp", user_id: 1, trip_id: 1)
+TripMember.create(id: 2, note: "Herpaderp", user_id: 2, trip_id: 1)
+
+
+Trip.delete_all
+Trip.create(date: '2008-11-11', description: "Test trip", user_id: 1 , mine_id: 1)
+
+
+Post.delete_all
 Post.create(id: 1, title: 'Rocking!', content: 'Freak human out make funny noise mow mow mow mow mow mow success now attack human chew iPad power cord purr so leave fur on owners clothes or knock dish off table head butt cant eat out of my own dish. Cereal boxes make for five star accommodation ask for petting go into a room to decide you did not want to be in there anyway yet chew foot, yet scratch the box if it smells like fish eat as much as you wish. I am getting hungry. Cat not kitten around then cats take over the world and meow all night having their mate disturbing sleeping humans kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff or nap all day, or if it fits, i sits', mine_id: 1, user_id: 1)
 Post.create(id: 2, title: 'Meh', content: 'I like big cats and i can not lie sit by the fire yet meow for food, then when human fills food dish, take a few bites of food and continue meowing please stop looking at your phone and pet me, destroy the blinds give attitude. You call this cat food?', mine_id: 2, user_id: 1)
 

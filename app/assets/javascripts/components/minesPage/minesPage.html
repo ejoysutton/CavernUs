@@ -7,4 +7,11 @@
     <p ng-repeat="post in mine.posts">
     Posts: {{ post.title }}
     </p>
+    <div ng-repeat="trip in mine.trips">
+        Posts: {{ trip.description }}
+        <div ng-repeat="member in trip.trip_members">
+            Hounds: {{ member }}
+        </div>
+    </div>
 </div>
+{{ $ctrl.mines }}
