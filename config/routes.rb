@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users
 
   namespace :api do
-    resources :mines, only: [:index]
+    resources :mines, only: [:index, :show]
+    resources :users
+    resources :posts, only: [:index]
+    resources :trips, only: [:index]
   end
 
+  devise_for :users
   root to: 'client#index'
   get '*path', to: 'client#index'
 

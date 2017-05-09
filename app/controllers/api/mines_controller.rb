@@ -3,6 +3,6 @@ class Api::MinesController < ApplicationController
   def index
     @mines = Mine.all
 
-    render json: @mines
+    render json: @mines.to_json(:include =>  :trips )
   end
 end

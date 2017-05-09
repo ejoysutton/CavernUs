@@ -22,14 +22,30 @@
 angular
     .module('CavernUs', ['ui.router'])
     .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+        // default fall back route
+        $urlRouterProvider.otherwise('/');
+
         $stateProvider
             .state('home', {
                 url: '/',
                 component: 'homePage'
+            })
+            .state('users', {
+                url: '/users',
+                component: 'usersPage'
+            })
+            .state('userShow', {
+                url: '/user/:userId',
+                component: 'userShowPage'
+            })
+            .state('mines', {
+                url: '/mines',
+                component: 'minesPage'
+            })
+            .state('trips', {
+            url: '/trips',
+            component: 'tripsPage'
             });
-
-        // default fall back route
-        $urlRouterProvider.otherwise('/');
 
         // enable HTML5 Mode for SEO
         $locationProvider.html5Mode({

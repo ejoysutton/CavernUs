@@ -1,19 +1,18 @@
 angular
     .module('CavernUs')
-    .component('homePage', {
-        templateUrl: '<%= asset_path("components/homePage/homePage") %>',
-        controller: HomePageController
+    .component('usersPage', {
+        templateUrl: '<%= asset_path("components/usersPage/usersPage") %>',
+        controller: UsersPageController
     });
 
-HomePageController.$inject = ['$http'];
+UsersPageController.$inject = ['$http'];
 
-function HomePageController($http) {
+function UsersPageController($http) {
     var vm = this;
 
     vm.message = "Let's rock!";
     vm.mines = [];
     vm.users = [];
-    vm.user = [];
     vm.posts = [];
 
     $http.get('/api/mines').then(function(resp) {
@@ -21,11 +20,6 @@ function HomePageController($http) {
     });
     $http.get('/api/users').then(function(resp) {
         vm.users = resp.data;
-//        vm.user = resp.data;
-    });
-    $http.get('/api/users').then(function(resp) {
-        vm.users = resp.data;
-//        vm.user = resp.data;
     });
     $http.get('/api/posts').then(function(resp) {
         vm.posts = resp.data;
