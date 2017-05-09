@@ -3,6 +3,7 @@ class Api::TripsController < ApplicationController
   def index
     @trips = Trip.all
   # render json: @trips
-    render json: @trips.to_json(:include => :trip_members )
+    render json: @trips.to_json(:include => :users )
+
   end
 end

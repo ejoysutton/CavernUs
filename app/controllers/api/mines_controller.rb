@@ -3,7 +3,6 @@ class Api::MinesController < ApplicationController
   def index
     @mines = Mine.all
 
-    render json: @mines.to_json(:include => { :trips => {
-        :include => :trip_members }})
+    render json: @mines.to_json(:include =>  :trips )
   end
 end
