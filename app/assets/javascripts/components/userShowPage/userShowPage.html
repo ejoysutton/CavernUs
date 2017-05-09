@@ -1,14 +1,10 @@
 <h1>CavernUs User Show Page</h1>
 
-<div ng-repeat="user in $ctrl.user">
-    Name: {{ user.username }}
-    <br/>
-    Bio: {{ user.bio }}
-    <br/>
-    <p ng-repeat="post in user.posts">
-        {{ post.title }}
-        {{ post.content }}
-    </p>
-</div>
+<p>Name: {{ $ctrl.user.username }}</p>
+<p>Location: {{ $ctrl.user.location }}</p>
+<p>Bio: {{ $ctrl.user.bio }}</p>
 
-{{ $ctrl.user }}
+
+
+
+{{ $ctrl.mine }}

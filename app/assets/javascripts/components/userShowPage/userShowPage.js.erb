@@ -5,9 +5,9 @@ angular
         controller: UserShowPageController
     });
 
-UserShowPageController.$inject = ['$http'];
+UserShowPageController.$inject = ['$http', '$stateParams'];
 
-function UserShowPageController($http) {
+function UserShowPageController($http, $stateParams) {
     var vm = this;
 
     vm.message = "Let's rock!";
@@ -25,7 +25,7 @@ function UserShowPageController($http) {
     $http.get('/api/posts').then(function(resp) {
         vm.posts = resp.data;
     });
-    $http.get('/api/users/:user_id').then(function(resp) {
+    $http.get('/api/users/' + $stateParams.userId).then(function(resp) {
         vm.user = resp.data;
     });
 }

@@ -35,7 +35,7 @@ angular
                 component: 'usersPage'
             })
             .state('userShow', {
-                url: '/user/:userId',
+                url: '/users/:userId',
                 component: 'userShowPage'
             })
             .state('mines', {
