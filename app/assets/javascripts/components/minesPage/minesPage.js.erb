@@ -1,0 +1,27 @@
+angular
+    .module('CavernUs')
+    .component('minesPage', {
+        templateUrl: '<%= asset_path("components/minesPage/minesPage") %>',
+        controller: MinesPageController
+    });
+
+MinesPageController.$inject = ['$http'];
+
+function MinesPageController($http) {
+    var vm = this;
+
+    vm.message = "Let's rock!";
+    vm.mines = [];
+    vm.users = [];
+    vm.posts = [];
+
+    $http.get('/api/mines').then(function(resp) {
+        vm.mines = resp.data;
+    });
+    $http.get('/api/users').then(function(resp) {
+        vm.users = resp.data;
+    });
+    $http.get('/api/posts').then(function(resp) {
+        vm.posts = resp.data;
+    });
+}

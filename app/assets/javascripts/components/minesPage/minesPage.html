@@ -1,0 +1,10 @@
+<h1>CavernUs Mine Page</h1>
+
+<div ng-repeat="mine in $ctrl.mines">
+    Name: {{ mine.name }}
+    <br/>
+    Description: {{ mine.description }}
+    <p ng-repeat="post in mine.posts">
+    Posts: {{ post.title }}
+    </p>
+</div>
