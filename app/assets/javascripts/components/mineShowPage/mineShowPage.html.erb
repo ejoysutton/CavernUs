@@ -1,0 +1,24 @@
+<h1>CavernUs Mine Show Page</h1>
+
+<p>Name: {{ $ctrl.mine.name }}</p>
+<p>Description: {{ $ctrl.mine.description }}</p>
+<p>Address: {{ $ctrl.mine.address }}</p>
+
+<!--{{ $ctrl.mine }}-->
+
+<!--{{ $ctrl.mines }}-->
+<form>
+  <label>Mine Name</label>
+  <input ng-model="$ctrl.mine.name" />
+  <br/>
+
+  <label>Mine Location</label>
+  <input ng-model="$ctrl.mine.address" />
+  <br/>
+
+  <label>Mine Description</label>
+  <textarea ng-model="$ctrl.mine.description"></textarea>
+  <br/>
+
+  <button ng-click="$ctrl.saveMine()">Update Mine</button>
+<form>

@@ -15,25 +15,25 @@ class Api::MinesController < ApplicationController
   def create
     @mine = Mine.new(mine_create_params)
     if @post.save
-      redirect_to city_show_path(@city.id)
+
     else
-      render :new
+
     end
 
     def update
       @mine = Mine.find(params[:id])
 
       if @mine.update(mine_update_params)
-        render json: @mine
+        redirect_to @mine, notice: 'Mine was successfully updated.'
       else
-        render json: @mine.errors.messages, status: :bad_request
+        render :edit
       end
     end
 
     def mine_create_params
-      params.require(:post)
-          .permit(:title, :content)
-          .merge(user_id: current_user.id, city_id: params[:city_id])
+      params.require(:mine)
+          .permit(:name, :address, :description)
+
     end
 
   end
