@@ -14,7 +14,7 @@ function MineShowPageController($http, $state, $stateParams, minesService) {
     vm.mines = [];
     vm.users = [];
     vm.posts = [];
-    vm.mine = [];
+    vm.mine = {};
 
     vm.saveMine = saveMine;
 
@@ -25,7 +25,10 @@ function MineShowPageController($http, $state, $stateParams, minesService) {
     function saveMine() {
         minesService.updateMine(vm.mine).then(function(resp) {
             if(resp.status == 200) {
-                $stateParams.go(mineShow, { id: resp.data.id })
+                console.log(resp)
+//                $state.reload();
+                //USE WHEN ADDING A NEW MINE
+//                vm.mines.push(vm.newMine)
             } else {
                 alert('There was an error while editing this mine')
             }

@@ -11,8 +11,8 @@ function minesService($http) {
         return $http.get('/api/mines/' + id);
     }
 
-    factory.updateMine = function(mineId, mine) {
-        return $http.put('/api/mines/' + mineId.id, mine);
+    factory.updateMine = function(mine) {
+        return $http.put('/api/mines/' + mine.id, mine);
     }
 
     return factory;

@@ -13,6 +13,7 @@ class Api::MinesController < ApplicationController
   end
 
   def update
+
     @mine = Mine.find(params[:id])
 
     if @mine.update(mine_params)
@@ -33,7 +34,7 @@ class Api::MinesController < ApplicationController
 
 
   def mine_params
-    params.require(:mine)
+    params
         .permit(:name, :address, :description)
 
   end
