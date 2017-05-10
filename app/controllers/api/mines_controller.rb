@@ -6,6 +6,12 @@ class Api::MinesController < ApplicationController
     render json: @mines.to_json(:include =>  :trips )
   end
 
+  def show
+    @mine = Mine.find(params[:id])
+    render json: @mine.to_json(:include =>  :trips )
+
+  end
+
   def create
     @mine = Mine.new(mine_create_params)
     if @post.save

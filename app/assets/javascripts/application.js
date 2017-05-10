@@ -42,6 +42,10 @@ angular
                 url: '/mines',
                 component: 'minesPage'
             })
+            .state('mineShow', {
+                url: '/mines/:mineId',
+                component: 'mineShowPage'
+            })
             .state('trips', {
             url: '/trips',
             component: 'tripsPage'
