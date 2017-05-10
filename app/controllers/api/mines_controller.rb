@@ -3,12 +3,21 @@ class Api::MinesController < ApplicationController
   def index
     @mines = Mine.all
 
-    render json: @mines.to_json(:include =>  :trips )
+    render json: @mines.to_json(:include =>  { :trips => {
+                                    :include =>  { :users => {
+                                        :only => :username
+                                    }
+    }}} )
   end
 
   def show
     @mine = Mine.find(params[:id])
-    render json: @mine.to_json(:include =>  :trips )
+    # render json: @mine.to_json(:include =>  { :trips => {
+    #     :include =>  { :users => { :only => :username }
+    #     }}} )
+    render json: @mine.to_json(:include =>  [ :posts, :trips => {
+           :include =>  :users
+           }] )
 
   end
 

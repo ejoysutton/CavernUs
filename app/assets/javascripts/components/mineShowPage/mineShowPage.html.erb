@@ -4,9 +4,22 @@
 <p>Description: {{ $ctrl.mine.description }}</p>
 <p>Address: {{ $ctrl.mine.address }}</p>
 
-<!--{{ $ctrl.mine }}-->
+<hr>
+<h3>Posts</h3>
 
-<!--{{ $ctrl.mines }}-->
+  <div ng-repeat="post in $ctrl.mine.posts">
+  Posts: {{ post.title }}
+  </div>
+
+<hr>
+<h3>Trips</h3>
+<div ng-repeat="trip in $ctrl.mine.trips">
+  Trips: {{ trip.description }}
+  <div ng-repeat="member in trip.trip_members">
+  Hounds: {{ member }}
+  </div>
+</div>
+<hr>
 <form>
   <label>Mine Name</label>
   <input ng-model="$ctrl.mine.name" />
@@ -22,3 +35,6 @@
 
   <button ng-click="$ctrl.saveMine()">Update Mine</button>
 </form>
+
+{{ $ctrl.mine }}
+<hr>
