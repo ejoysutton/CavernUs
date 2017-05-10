@@ -5,9 +5,9 @@ angular
         controller: MineShowPageController
     });
 
-MineShowPageController.$inject = ['$http', '$state', '$stateParams', 'minesService', 'postsService'];
+MineShowPageController.$inject = ['$http', '$state', '$stateParams', 'minesService', 'postsService', 'tripsService'];
 
-function MineShowPageController($http, $state, $stateParams, minesService, postsService) {
+function MineShowPageController($http, $state, $stateParams, minesService, postsService, tripsService) {
     var vm = this;
 
     vm.message = "Let's rock!";
@@ -20,10 +20,15 @@ function MineShowPageController($http, $state, $stateParams, minesService, posts
         content: '',
         mine_id: $stateParams.mineId
     };
+    vm.newTrip = {
+        date: '',
+        description: '',
+        mine_id: $stateParams.mineId
+    };
 
     vm.saveMine = saveMine;
-
     vm.saveNewPost = saveNewPost;
+    vm.saveNewTrip = saveNewTrip;
 
     minesService.getMine($stateParams.mineId).then(function(resp) {
         vm.mine = resp.data;
@@ -50,12 +55,36 @@ function MineShowPageController($http, $state, $stateParams, minesService, posts
                 $state.reload();
                 //This, now vm.mine.posts.push works, look into it later
                 //vm.mines.push(vm.newPost)
-                vm.newPost ={};
+                vm.newPost = {
+                    title: '',
+                    content: '',
+                    mine_id: $stateParams.mineId
+                };
             } else {
                 alert('There was an error while creating this post')
             }
         });
     }
+
+    function saveNewTrip() {
+        tripsService.newTrip(vm.newTrip).then(function(resp) {
+            console.log(vm.newTrip);
+            if(resp.status == 201) {
+                console.log(resp)
+                $state.reload();
+                //This, now vm.mine.posts.push works, look into it later
+                //vm.mines.push(vm.newPost)
+                vm.newTrip ={
+                    date: '',
+                    description: '',
+                    mine_id: $stateParams.mineId
+                };
+            } else {
+                alert('There was an error while creating this trip')
+            }
+        });
+    }
+
 
 
 //    $http.get('/api/mines').then(function(resp) {

@@ -50,7 +50,7 @@ class Api::TripsController < ApplicationController
 
   def new_trip_params
     params.require(:trip)
-        .permit(:date, :description)
+        .permit(:date, :description, :mine_id)
         .merge(user_id: current_user.id)
   end
 

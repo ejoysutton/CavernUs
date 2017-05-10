@@ -33,8 +33,22 @@
 
   <button ng-click="$ctrl.saveNewPost()">Create Post</button>
 </form>
+<hr>
 
+<h3>Add a new Trip</h3>
+<form>
+  <label>Trip Date</label>
+  <input type="date" ng-model="$ctrl.newTrip.date" />
+  <br/>
 
+  <label>Trip Description</label>
+  <input ng-model="$ctrl.newTrip.description" />
+  <br/>
+
+  <button ng-click="$ctrl.saveNewTrip()">Create Trip</button>
+</form>
+
+<hr>
 <h3>Edit Mine</h3>
 <form>
   <label>Mine Name</label>
