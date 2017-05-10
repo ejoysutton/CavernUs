@@ -1,7 +1,7 @@
 <h1>CavernUs Mine Page</h1>
 
 <div ng-repeat="mine in $ctrl.mines">
-    Name: {{ mine.name }}
+    Name: <a ui-sref="mineShow({ mineId: mine.id })">{{ mine.name }}</a>
     <br/>
     Description: {{ mine.description }}
     <p ng-repeat="post in mine.posts">
