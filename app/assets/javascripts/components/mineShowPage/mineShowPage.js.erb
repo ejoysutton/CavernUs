@@ -44,8 +44,6 @@ function MineShowPageController($http, $state, $stateParams, minesService) {
     $http.get('/api/posts').then(function(resp) {
         vm.posts = resp.data;
     });
-//    $http.get('/api/mines/' + $stateParams.mineId).then(function(resp) {
-//        vm.mine = resp.data;
-//    });
+
 
 }
