@@ -28,4 +28,5 @@ function UserShowPageController($http, $stateParams) {
     $http.get('/api/users/' + $stateParams.userId).then(function(resp) {
         vm.user = resp.data;
     });
+
 }

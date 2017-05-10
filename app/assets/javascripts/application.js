@@ -45,6 +45,10 @@ angular
             .state('trips', {
             url: '/trips',
             component: 'tripsPage'
+            })
+            .state('profile', {
+                url: '/profile',
+                component: 'profilePage'
             });
 
         // enable HTML5 Mode for SEO
