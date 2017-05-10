@@ -17,6 +17,7 @@ function MinesPageController($http, $state, $stateParams, minesService) {
     vm.newMine = {};
 
     vm.saveMine = saveMine;
+    vm.deleteMine = deleteMine;
 //
 //    minesService.getMine($stateParams.mineId).then(function(resp) {
 //        vm.mine = resp.data;
@@ -33,6 +34,19 @@ function MinesPageController($http, $state, $stateParams, minesService) {
                 vm.newMine ={};
             } else {
                 alert('There was an error while editing this mine')
+            }
+        });
+    }
+
+    function deleteMine(mine) {
+        console.log(mine);
+        minesService.destroyMine(mine).then(function(resp) {
+            console.log(mine);
+            if(resp.status == 204) {
+                console.log(resp)
+                $state.reload();
+            } else {
+                alert('There was an error while deleting this mine')
             }
         });
     }

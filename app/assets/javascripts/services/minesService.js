@@ -19,6 +19,11 @@ function minesService($http) {
         return $http.post('/api/mines/', mine);
     }
 
+    factory.destroyMine = function(mine) {
+        console.log(mine);
+        return $http.delete('/api/mines/' + mine.id);
+    }
+
     return factory;
 
 }

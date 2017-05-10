@@ -32,6 +32,14 @@ class Api::MinesController < ApplicationController
     end
   end
 
+  def destroy
+    @mine = Mine.find(params[:id])
+
+    @mine.destroy
+
+    render json: '', status: :no_content
+  end
+
 private
   def mine_params
     params
