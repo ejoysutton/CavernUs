@@ -15,6 +15,10 @@ function minesService($http) {
         return $http.put('/api/mines/' + mine.id, mine);
     }
 
+    factory.newMine = function(mine) {
+        return $http.post('/api/mines/', mine);
+    }
+
     return factory;
 
 }

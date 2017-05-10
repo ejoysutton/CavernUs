@@ -14,4 +14,18 @@
         </div>
     </div>
 </div>
-{{ $ctrl.mines }}
+<form>
+    <label>Mine Name</label>
+    <input ng-model="$ctrl.newMine.name" />
+    <br/>
+
+    <label>Mine Location</label>
+    <input ng-model="$ctrl.newMine.address" />
+    <br/>
+
+    <label>Mine Description</label>
+    <textarea ng-model="$ctrl.newMine.description"></textarea>
+    <br/>
+
+    <button ng-click="$ctrl.saveMine()">Create Mine</button>
+</form>

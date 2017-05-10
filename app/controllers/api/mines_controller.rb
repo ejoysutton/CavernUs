@@ -24,21 +24,26 @@ class Api::MinesController < ApplicationController
   end
 
   def create
-    @mine = Mine.new(mine_params)
+    @mine = Mine.new(new_mine_params)
     if @mine.save
-
+      render json: @mine, status: :created
     else
-
+      render json: @mine.errors, status: :unprocessable_entity
     end
   end
 
-
+private
   def mine_params
     params
         .permit(:name, :address, :description)
 
   end
 
+  def new_mine_params
+    params.require(:mine)
+        .permit(:name, :address, :description)
+
+  end
 
 
 end
