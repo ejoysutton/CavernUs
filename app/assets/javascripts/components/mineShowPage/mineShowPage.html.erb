@@ -1,0 +1,70 @@
+<h1>CavernUs Mine Show Page</h1>
+
+<p>Name: {{ $ctrl.mine.name }}</p>
+<p>Description: {{ $ctrl.mine.description }}</p>
+<p>Address: {{ $ctrl.mine.address }}</p>
+
+<hr>
+<h3>Posts</h3>
+
+  <div ng-repeat="post in $ctrl.mine.posts">
+  Posts: {{ post.title }}
+  </div>
+
+<hr>
+<h3>Trips</h3>
+<div ng-repeat="trip in $ctrl.mine.trips">
+  Trips: {{ trip.description }}
+  <div ng-repeat="member in trip.trip_members">
+  Hounds: {{ member }}
+  </div>
+</div>
+<hr>
+
+<h3>Add a new Post</h3>
+<form>
+  <label>Post Title</label>
+  <input ng-model="$ctrl.newPost.title" />
+  <br/>
+
+  <label>Post Content</label>
+  <input ng-model="$ctrl.newPost.content" />
+  <br/>
+
+  <button ng-click="$ctrl.saveNewPost()">Create Post</button>
+</form>
+<hr>
+
+<h3>Add a new Trip</h3>
+<form>
+  <label>Trip Date</label>
+  <input type="date" ng-model="$ctrl.newTrip.date" />
+  <br/>
+
+  <label>Trip Description</label>
+  <input ng-model="$ctrl.newTrip.description" />
+  <br/>
+
+  <button ng-click="$ctrl.saveNewTrip()">Create Trip</button>
+</form>
+
+<hr>
+<h3>Edit Mine</h3>
+<form>
+  <label>Mine Name</label>
+  <input ng-model="$ctrl.mine.name" />
+  <br/>
+
+  <label>Mine Location</label>
+  <input ng-model="$ctrl.mine.address" />
+  <br/>
+
+  <label>Mine Description</label>
+  <textarea ng-model="$ctrl.mine.description"></textarea>
+  <br/>
+
+  <button ng-click="$ctrl.saveMine()">Update Mine</button>
+</form>
+
+{{ $ctrl.mine }}
+<hr>

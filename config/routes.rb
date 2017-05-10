@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
   namespace :api do
-    resources :mines, only: [:index, :show]
+    resources :mines, only: [:index, :show, :update, :create, :destroy]
     resources :users, only: [:index, :show, :profile]
-    resources :posts, only: [:index]
-    resources :trips, only: [:index]
+    resources :posts, only: [:index, :show, :update, :create, :destroy]
+    resources :trips, only: [:index, :show, :update, :create, :destroy]
     resources :profile, only: [:index, :show]
   end
 

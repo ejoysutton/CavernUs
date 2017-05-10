@@ -8,6 +8,10 @@
 
 # Reset Db sequence to avoid heroku errors
 ActiveRecord::Base.connection.reset_pk_sequence!('mines')
+ActiveRecord::Base.connection.reset_pk_sequence!('trip_members')
+ActiveRecord::Base.connection.reset_pk_sequence!('trips')
+ActiveRecord::Base.connection.reset_pk_sequence!('posts')
+ActiveRecord::Base.connection.reset_pk_sequence!('users')
 
 #seeded mines
 Mine.delete_all
@@ -20,7 +24,7 @@ TripMember.create(id: 2, note: "Herpaderp", user_id: 2, trip_id: 1)
 
 
 Trip.delete_all
-Trip.create(date: '2008-11-11', description: "Test trip", user_id: 1 , mine_id: 1)
+Trip.create(id: 1, date: '2008-11-11', description: "Test trip", user_id: 1 , mine_id: 1)
 
 
 Post.delete_all
@@ -48,4 +52,14 @@ User.create(id: 2,
             bio: "Hi there! I'm Julia and I just adore the theatre! One day I hope to visit New York and go to a Broadway show.",
             location: 'Savannah, GA',
             username: 'StageJewel'
+)
+
+User.create(id: 3,
+            email: 'joy@example.com',
+            password: 'default',
+            password_confirmation: 'default',
+            avatar_url: 'http://i.imgur.com/JveSa0a.jpg',
+            bio: "I love minerals! I can't wait to hit more mines.",
+            location: 'Woodstock, GA',
+            username: 'Joy'
 )

@@ -5,15 +5,51 @@ angular
         controller: MinesPageController
     });
 
-MinesPageController.$inject = ['$http'];
+MinesPageController.$inject = ['$http', '$state', '$stateParams', 'minesService'];
 
-function MinesPageController($http) {
+function MinesPageController($http, $state, $stateParams, minesService) {
     var vm = this;
 
     vm.message = "Let's rock!";
     vm.mines = [];
     vm.users = [];
     vm.posts = [];
+    vm.newMine = {};
+
+    vm.saveNewMine = saveNewMine;
+    vm.deleteMine = deleteMine;
+//
+//    minesService.getMine($stateParams.mineId).then(function(resp) {
+//        vm.mine = resp.data;
+//    });
+
+    function saveNewMine() {
+        minesService.newMine(vm.newMine).then(function(resp) {
+            console.log(vm.newMine);
+            if(resp.status == 201) {
+                console.log(resp)
+//                $state.reload();
+                //USE WHEN ADDING A NEW MINE
+                vm.mines.push(vm.newMine)
+                vm.newMine ={};
+            } else {
+                alert('There was an error while editing this mine')
+            }
+        });
+    }
+
+    function deleteMine(mine) {
+        console.log(mine);
+        minesService.destroyMine(mine).then(function(resp) {
+            console.log(mine);
+            if(resp.status == 204) {
+                console.log(resp)
+                $state.reload();
+            } else {
+                alert('There was an error while deleting this mine')
+            }
+        });
+    }
 
     $http.get('/api/mines').then(function(resp) {
         vm.mines = resp.data;
