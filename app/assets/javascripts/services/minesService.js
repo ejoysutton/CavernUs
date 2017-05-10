@@ -11,10 +11,10 @@ function minesService($http) {
         return $http.get('/api/mines/' + id);
     }
 
-    factory.updateMine = function(id, mine) {
-        return $http.patch('/api/notes/' + id, mine);
+    factory.updateMine = function(mineId, mine) {
+        return $http.put('/api/mines/' + mineId.id, mine);
     }
 
-
+    return factory;
 
 }

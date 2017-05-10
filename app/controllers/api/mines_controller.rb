@@ -24,9 +24,9 @@ class Api::MinesController < ApplicationController
       @mine = Mine.find(params[:id])
 
       if @mine.update(mine_update_params)
-        redirect_to @mine, notice: 'Mine was successfully updated.'
+        render json: @mine, status: :ok
       else
-        render :edit
+        render json: @mine.errord, status: :unprocessable_entity
       end
     end
 
