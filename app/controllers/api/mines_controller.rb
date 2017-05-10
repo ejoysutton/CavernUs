@@ -20,6 +20,16 @@ class Api::MinesController < ApplicationController
       render :new
     end
 
+    def update
+      @mine = Mine.find(params[:id])
+
+      if @mine.update(mine_update_params)
+        render json: @mine
+      else
+        render json: @mine.errors.messages, status: :bad_request
+      end
+    end
+
     def mine_create_params
       params.require(:post)
           .permit(:title, :content)
