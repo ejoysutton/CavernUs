@@ -5,9 +5,9 @@ angular
         controller: MineShowPageController
     });
 
-MineShowPageController.$inject = ['$http', '$stateParams', 'minesService'];
+MineShowPageController.$inject = ['$http', '$state', '$stateParams', 'minesService'];
 
-function MineShowPageController($http, $stateParams, minesService) {
+function MineShowPageController($http, $state, $stateParams, minesService) {
     var vm = this;
 
     vm.message = "Let's rock!";
@@ -25,7 +25,7 @@ function MineShowPageController($http, $stateParams, minesService) {
     function saveMine() {
         minesService.updateMine(vm.mine).then(function(resp) {
             if(resp.status == 200) {
-                $state.go(mineShow, { id: resp.data.id })
+                $stateParams.go(mineShow, { id: resp.data.id })
             } else {
                 alert('There was an error while editing this mine')
             }
