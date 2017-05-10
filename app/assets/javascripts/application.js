@@ -35,16 +35,24 @@ angular
                 component: 'usersPage'
             })
             .state('userShow', {
-                url: '/user/:userId',
+                url: '/users/:userId',
                 component: 'userShowPage'
             })
             .state('mines', {
                 url: '/mines',
                 component: 'minesPage'
             })
+            .state('mineShow', {
+                url: '/mines/:mineId',
+                component: 'mineShowPage'
+            })
             .state('trips', {
             url: '/trips',
             component: 'tripsPage'
+            })
+            .state('profile', {
+                url: '/profile',
+                component: 'profilePage'
             });
 
         // enable HTML5 Mode for SEO

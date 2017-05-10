@@ -1,8 +1,8 @@
-class Api::UsersController < ApplicationController
+class UsersController < ApplicationController
   # before_action :authenticate_user!, only: [:profile, :edit]
   # before_action :user_params, only: [:show]
   def show
-    @user = User.find(params[:id])
+    @user = User.find(current_user.id)
     render json: @user.to_json(:include =>  :posts )
 
   end
@@ -16,9 +16,8 @@ class Api::UsersController < ApplicationController
   end
 
   def index
-    # @user = current_user
-    @users = User.all
-    render json: @users.to_json(include: :posts)
+    @user = User.find(current_user.id)
+    render json: @user.to_json(:include =>  :posts )
   end
 
   def profile

@@ -1,0 +1,34 @@
+angular
+    .module('CavernUs')
+    .component('profilePage', {
+        templateUrl: '<%= asset_path("components/profilePage/profilePage") %>',
+        controller: ProfilePageController
+    });
+
+ProfilePageController.$inject = ['$http', '$stateParams'];
+
+function ProfilePageController($http, $stateParams) {
+    var vm = this;
+
+    vm.message = "Let's rock!";
+    vm.mines = [];
+    vm.users = [];
+    vm.posts = [];
+    vm.user = [];
+
+    $http.get('/api/mines').then(function(resp) {
+        vm.mines = resp.data;
+    });
+    $http.get('/api/users').then(function(resp) {
+        vm.users = resp.data;
+    });
+    $http.get('/api/posts').then(function(resp) {
+        vm.posts = resp.data;
+    });
+//    $http.get('/api/users/' + $stateParams.userId).then(function(resp) {
+//        vm.user = resp.data;
+//    });
+    $http.get('/api/profile').then(function(resp) {
+        vm.user = resp.data;
+    });
+}
