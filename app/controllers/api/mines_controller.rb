@@ -12,31 +12,32 @@ class Api::MinesController < ApplicationController
 
   end
 
+  def update
+    @mine = Mine.find(params[:id])
+
+    if @mine.update(mine_params)
+      render json: @mine, status: :ok
+    else
+      render json: @mine.error, status: :unprocessable_entity
+    end
+  end
+
   def create
-    @mine = Mine.new(mine_create_params)
-    if @post.save
+    @mine = Mine.new(mine_params)
+    if @mine.save
 
     else
 
     end
+  end
 
-    def update
-      @mine = Mine.find(params[:id])
 
-      if @mine.update(mine_update_params)
-        render json: @mine, status: :ok
-      else
-        render json: @mine.errord, status: :unprocessable_entity
-      end
-    end
-
-    def mine_create_params
-      params.require(:mine)
-          .permit(:name, :address, :description)
-
-    end
+  def mine_params
+    params.require(:mine)
+        .permit(:name, :address, :description)
 
   end
+
 
 
 end
