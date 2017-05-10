@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac572159-c9f5-47be-9ff5-6dc50fd739c2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.html.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/trips_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/trips_controller.rb" />
-    </list>
+    <list default="true" id="ac572159-c9f5-47be-9ff5-6dc50fd739c2" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -1068,12 +1064,12 @@
       <workItem from="1494098397143" duration="52920000" />
       <workItem from="1494376996034" duration="709000" />
       <workItem from="1494377847543" duration="92000" />
-      <workItem from="1494377966196" duration="34150000" />
+      <workItem from="1494377966196" duration="34598000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87871000" />
+    <option name="totallyTimeSpent" value="88319000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
