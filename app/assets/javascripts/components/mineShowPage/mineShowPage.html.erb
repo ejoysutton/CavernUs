@@ -20,6 +20,22 @@
   </div>
 </div>
 <hr>
+
+<h3>Add a new Post</h3>
+<form>
+  <label>Post Title</label>
+  <input ng-model="$ctrl.newPost.title" />
+  <br/>
+
+  <label>Post Content</label>
+  <input ng-model="$ctrl.newPost.content" />
+  <br/>
+
+  <button ng-click="$ctrl.saveNewPost()">Create Post</button>
+</form>
+
+
+<h3>Edit Mine</h3>
 <form>
   <label>Mine Name</label>
   <input ng-model="$ctrl.mine.name" />

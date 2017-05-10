@@ -16,14 +16,14 @@ function MinesPageController($http, $state, $stateParams, minesService) {
     vm.posts = [];
     vm.newMine = {};
 
-    vm.saveMine = saveMine;
+    vm.saveNewMine = saveNewMine;
     vm.deleteMine = deleteMine;
 //
 //    minesService.getMine($stateParams.mineId).then(function(resp) {
 //        vm.mine = resp.data;
 //    });
 
-    function saveMine() {
+    function saveNewMine() {
         minesService.newMine(vm.newMine).then(function(resp) {
             console.log(vm.newMine);
             if(resp.status == 201) {

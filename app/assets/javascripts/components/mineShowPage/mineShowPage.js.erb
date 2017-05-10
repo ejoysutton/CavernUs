@@ -5,9 +5,9 @@ angular
         controller: MineShowPageController
     });
 
-MineShowPageController.$inject = ['$http', '$state', '$stateParams', 'minesService'];
+MineShowPageController.$inject = ['$http', '$state', '$stateParams', 'minesService', 'postsService'];
 
-function MineShowPageController($http, $state, $stateParams, minesService) {
+function MineShowPageController($http, $state, $stateParams, minesService, postsService) {
     var vm = this;
 
     vm.message = "Let's rock!";
@@ -15,8 +15,15 @@ function MineShowPageController($http, $state, $stateParams, minesService) {
     vm.users = [];
     vm.posts = [];
     vm.mine = {};
+    vm.newPost = {
+        title: '',
+        content: '',
+        mine_id: $stateParams.mineId
+    };
 
     vm.saveMine = saveMine;
+
+    vm.saveNewPost = saveNewPost;
 
     minesService.getMine($stateParams.mineId).then(function(resp) {
         vm.mine = resp.data;
@@ -34,6 +41,22 @@ function MineShowPageController($http, $state, $stateParams, minesService) {
             }
         });
     }
+
+    function saveNewPost() {
+        postsService.newPost(vm.newPost).then(function(resp) {
+            console.log(vm.newPost);
+            if(resp.status == 201) {
+                console.log(resp)
+                $state.reload();
+                //This, now vm.mine.posts.push works, look into it later
+                //vm.mines.push(vm.newPost)
+                vm.newPost ={};
+            } else {
+                alert('There was an error while creating this post')
+            }
+        });
+    }
+
 
 //    $http.get('/api/mines').then(function(resp) {
 //        vm.mines = resp.data;
