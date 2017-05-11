@@ -11,17 +11,18 @@ class Api::MinesController < ApplicationController
   end
 
   def show
+
     @mine = Mine.find(params[:id])
     # @posts = Post.find(params[:mine_id])
     # render json: @mine.to_json(:include =>  { :trips => {
     #     :include =>  { :users => { :only => :username }
     #     }}} )
-    render json: @mine.to_json(:include =>  [ :posts, :trips => {
-           :include =>  :users
-           }] )
+    # render json: @mine.to_json(:include =>  [ :posts, :trips => {
+    #        :include =>  :users
+    #        }] )
 
     # render json: {mine: @mine, posts: @posts, trips: @trips, users: @users}
-
+  render formats: :json
   end
 
   def update

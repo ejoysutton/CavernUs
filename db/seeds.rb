@@ -19,8 +19,8 @@ Mine.create(id: 1, name: "TestMine", address: "123 Street Rd. Placeville, GA", d
 Mine.create(id: 2, name: "DemoMine", address: "456 Avenue Hwy. New City, FL", description: "We have rocks!")
 
 TripMember.delete_all
-TripMember.create(id: 1, note: "Derp", user_id: 1, trip_id: 1)
-TripMember.create(id: 2, note: "Herpaderp", user_id: 2, trip_id: 1)
+TripMember.create(note: "Derp", user_id: 3, trip_id: 1)
+TripMember.create(note: "Herpaderp", user_id: 2, trip_id: 1)
 
 
 Trip.delete_all
