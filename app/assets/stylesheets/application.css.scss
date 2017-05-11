@@ -14,3 +14,15 @@
  *= require_tree .
  *= require_tree ../javascripts/components/
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  padding-top: 70px;
+}
+
+.navbar-icon {
+
+  margin-right: 20px;
+}
