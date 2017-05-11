@@ -19,9 +19,9 @@ function tripMembersService($http) {
         return $http.post('/api/trip_members/', trip_member);
     }
 
-    factory.destroyTripMember = function(trip_member) {
-        console.log(trip);
-        return $http.delete('/api/trip_members/' + trip_member.id);
+    factory.destroyTripMember = function(member_id) {
+
+        return $http.delete('/api/trip_members/' + member_id);
     }
 
     return factory;

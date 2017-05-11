@@ -26,16 +26,27 @@ function MineShowPageController($http, $state, $stateParams, minesService, posts
         mine_id: $stateParams.mineId
     };
     vm.newTripMember = { };
+//    vm.tripUsers = vm.mine.trips;
 
     vm.saveMine = saveMine;
     vm.saveNewPost = saveNewPost;
     vm.saveNewTrip = saveNewTrip;
     vm.addMemberToTrip = addMemberToTrip;
+    vm.removeMemberFromTrip = removeMemberFromTrip;
+//    vm.deletePost = deletePost;
+//    vm.userInTrip = userInTrip;
 
 
     minesService.getMine($stateParams.mineId).then(function(resp) {
         vm.mine = resp.data;
     });
+
+//    function userInTrip(user) {
+//            return user.user_id === mine.current_user;
+//        console.log(userInTrip.find('user_id'));
+//        }
+
+
 
     function saveMine() {
         minesService.updateMine(vm.mine).then(function(resp) {
@@ -104,6 +115,21 @@ function MineShowPageController($http, $state, $stateParams, minesService, posts
         })
 
     }
+
+    function removeMemberFromTrip(member_id) {
+        console.log();
+
+        tripMembersService.destroyTripMember(member_id).then(function(resp) {
+            console.log();
+            if(resp.status == 204) {
+                console.log(resp)
+                $state.reload();
+            } else {
+                alert('There was an error while deleting this trip')
+            }
+      })
+    }
+//    function
 
 
 
