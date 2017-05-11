@@ -15,6 +15,7 @@
   json.trips @mine.trips do |trip|
     json.description trip.description
     json.date trip.date
+    json.id trip.id
 
     json.users trip.users do |user|
       json.username user.username

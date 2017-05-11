@@ -5,9 +5,9 @@ angular
         controller: MineShowPageController
     });
 
-MineShowPageController.$inject = ['$http', '$state', '$stateParams', 'minesService', 'postsService', 'tripsService'];
+MineShowPageController.$inject = ['$http', '$state', '$stateParams', 'minesService', 'postsService', 'tripsService', 'tripMembersService'];
 
-function MineShowPageController($http, $state, $stateParams, minesService, postsService, tripsService) {
+function MineShowPageController($http, $state, $stateParams, minesService, postsService, tripsService, tripMembersService) {
     var vm = this;
 
     vm.message = "Let's rock!";
@@ -25,10 +25,13 @@ function MineShowPageController($http, $state, $stateParams, minesService, posts
         description: '',
         mine_id: $stateParams.mineId
     };
+    vm.newTripMember = { };
 
     vm.saveMine = saveMine;
     vm.saveNewPost = saveNewPost;
     vm.saveNewTrip = saveNewTrip;
+    vm.addMemberToTrip = addMemberToTrip;
+
 
     minesService.getMine($stateParams.mineId).then(function(resp) {
         vm.mine = resp.data;
@@ -88,7 +91,19 @@ function MineShowPageController($http, $state, $stateParams, minesService, posts
         });
     }
 
-    function addMemberToTrip
+    function addMemberToTrip(trip_id) {
+        vm.newTripMember.user_id = vm.mine.current_user;
+        vm.newTripMember.trip_id = trip_id;
+        tripMembersService.newTripMember(vm.newTripMember).then(function(resp) {
+            console.log(vm.newTripMember);
+            if(resp.status == 201) {
+                $state.reload();
+            } else {
+                alert('There was an error while adding to this trip')
+            }
+        })
+
+    }
 
 
 
