@@ -22,7 +22,7 @@ class Api::ProfileController < ApplicationController
 
   def profile
 
-    # THIS WORKS Returns the current user object, however, the api call doesn't seem to be reaching this!
+    # THIS WORKS Returns the current user object, however, the api call doesn't seem to be reaching this! I THINK THIS IS FIXED
     @user = User.find(current_user.id)
     render json: @user.to_json(:include =>  :posts )
   end

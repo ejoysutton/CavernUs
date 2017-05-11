@@ -1,13 +1,33 @@
-<h1>CavernUs Users Page</h1>
-
-<div ng-repeat="user in $ctrl.users">
-    Name: {{ user.username }}
-    <br/>
-    Bio: {{ user.bio }}
-    <br/>
-    <p ng-repeat="post in user.posts">
-        {{ post.title }}
-        {{ post.content }}
-    </p>
+<div class="align-center">
+    <img src="https://image.ibb.co/iF13qk/cavern_Us_Logo_Sm.png">
 </div>
-{{ $ctrl.user }}
+<div class="text-center col-md-4 col-md-offset-4">
+    <h1>Rockhounds</h1>
+    <h4>What is a rockhound? a rockhound is anyone who enjoys collecting rocks and minerals.
+        Some find their minerals by scouring shops and hobby shows, while others go out and dig
+        for themselves at open-access areas. Check out our current rockhounds to see where they've
+        been  and what they've found!
+    </h4>
+
+</div>
+
+
+<!--User Card Area-->
+
+<div class="card-row card-deck">
+    <div class="card-area card-small card-group" ng-repeat="user in $ctrl.users">
+        <div class="card user-card">
+            <!--<img class="card-img-top" ng-src="{{user.avatar_url}}" alt="Card image cap">-->
+            <div class="card-header">
+                <!--<img class="card-img-top img-circle align-self-start" ng-src="{{user.avatar_url}}" alt="Card image cap">-->
+                <img class="card-img-top img-circle align-self-start" src="https://image.ibb.co/ns7FLk/profile.jpg" alt="profile" border="0">
+                <a ui-sref="userShow({ userId: user.id })" class="btn btn-primary align-self-end">View User</a>
+            </div>
+            <div class="card-block align-self-stretch">
+                <h4 class="card-title">{{ user.username }}</h4>
+                <p class="card-text">{{ user.location }}</p>
+                <p class="card-text">{{ user.bio }}</p>
+            </div>
+        </div>
+    </div>
+</div>
