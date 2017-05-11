@@ -20,7 +20,6 @@ function postsService($http) {
     }
 
     factory.destroyPost = function(id) {
-        
         return $http.delete('/api/posts/' + id);
     }
 

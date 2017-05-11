@@ -83,6 +83,7 @@ function MineShowPageController($http, $state, $stateParams, minesService, posts
         });
     }
 
+
     function saveNewTrip() {
         tripsService.newTrip(vm.newTrip).then(function(resp) {
             console.log(vm.newTrip);
@@ -154,3 +155,14 @@ function MineShowPageController($http, $state, $stateParams, minesService, posts
 
 
 }
+$(document).ready(function(){
+    $(".nav-tabs a").click(function(){
+        $(this).tab('show');
+    });
+    $('.nav-tabs a').on('shown.bs.tab', function(event){
+        var x = $(event.target).text();         // active tab
+        var y = $(event.relatedTarget).text();  // previous tab
+        $(".act span").text(x);
+        $(".prev span").text(y);
+    });
+});
