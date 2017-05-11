@@ -26,7 +26,7 @@ class Api::MinesController < ApplicationController
   end
 
   def update
-
+    @users = User.all
     @mine = Mine.find(params[:id])
 
     if @mine.update(mine_params)
