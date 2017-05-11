@@ -33,7 +33,8 @@
         <h4 class="card-title">{{ post.title }}</h4>
         <p class="card-text">{{ post.username }}</p>
         <p class="card-text">{{ post.content }}</p>
-        <button ng-show="post.user_id == $ctrl.mine.current_user" ng-click="$ctrl.deletePost(post)">Delete Post</button>
+        {{post.id}}
+        <button ng-show="post.user_id == $ctrl.mine.current_user" ng-click="$ctrl.deletePost(post.id)">Delete Post</button>
 
         <!--<button type="button" class="btn btn-danger" ng-click="$ctrl.deleteMine(mine)">Delete Mine</button>-->
       </div>
@@ -63,7 +64,6 @@
           <p class="card-text">{{ user.avatar_url }}</p>
           <button ng-show="user.user_id == $ctrl.mine.current_user" ng-click="$ctrl.removeMemberFromTrip(user.member_id)">Leave Trip</button>
         </div>
-        <!--<button type="button" class="btn btn-danger" ng-click="$ctrl.deleteMine(mine)">Delete Mine</button>-->
       </div>
     </div>
   </div>

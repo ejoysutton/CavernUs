@@ -33,7 +33,7 @@ function MineShowPageController($http, $state, $stateParams, minesService, posts
     vm.saveNewTrip = saveNewTrip;
     vm.addMemberToTrip = addMemberToTrip;
     vm.removeMemberFromTrip = removeMemberFromTrip;
-//    vm.deletePost = deletePost;
+    vm.deletePost = deletePost;
 //    vm.userInTrip = userInTrip;
 
 
@@ -129,7 +129,16 @@ function MineShowPageController($http, $state, $stateParams, minesService, posts
             }
       })
     }
-//    function
+    function deletePost(post_id) {
+        postsService.destroyPost(post_id).then(function(resp) {
+            if(resp.status == 204) {
+                console.log(resp)
+                $state.reload();
+            } else {
+                alert('There was an error while deleting this post')
+            }
+        });
+    }
 
 
 

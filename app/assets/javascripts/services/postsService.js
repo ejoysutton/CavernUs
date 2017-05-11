@@ -19,9 +19,9 @@ function postsService($http) {
         return $http.post('/api/posts/', post);
     }
 
-    factory.destroyPost = function(post) {
-        console.log(post);
-        return $http.delete('/api/posts/' + post.id);
+    factory.destroyPost = function(id) {
+        
+        return $http.delete('/api/posts/' + id);
     }
 
     return factory;

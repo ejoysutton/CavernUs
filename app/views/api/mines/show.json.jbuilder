@@ -10,6 +10,7 @@
     json.content post.content
     json.username User.find(post.user_id).username
     json.user_id post.user_id
+    json.id post.id
 
   end
 
