@@ -80,6 +80,31 @@ body {
 
 }
 
+.card-wide {
+  background-color: lightgray;
+  border-radius: 5px;
+  margin: 20px;
+
+  .card-img-top {
+    width: 140px;
+    margin: 10px;
+  }
+  .btn {
+    margin: 10px;
+  }
+
+}
+.col-center{
+  margin:0 auto;
+}
+
+
+.centered-button {
+  width: 140px;
+  margin: auto;
+}
+
+
 .base-container {
   width: 100%;
   height: 100%;
@@ -90,6 +115,12 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.header-box {
+  width: 600px;
+  margin: auto;
+}
+
 
 @media(min-width:768px) {
   header .container {
