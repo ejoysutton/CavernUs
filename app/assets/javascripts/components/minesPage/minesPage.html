@@ -29,13 +29,13 @@ data-target="#addMineModal">Add a New Mine</a>
                 <h4 class="card-title">{{ mine.name }}</h4>
                 <p class="card-text">{{ mine.address }}</p>
                 <p class="card-text">{{ mine.description }}</p>
-                <button ng-click="$ctrl.deleteMine(mine)">Delete Mine</button>
+                <button type="button" class="btn btn-danger" ng-click="$ctrl.deleteMine(mine)">Delete Mine</button>
             </div>
         </div>
     </div>
 </div>
 
-
+<!--Add Mine Modal-->
 
 <div class="modal fade" id="addMineModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
     <div class="modal-dialog">

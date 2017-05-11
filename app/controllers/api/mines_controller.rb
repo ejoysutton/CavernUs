@@ -11,7 +11,7 @@ class Api::MinesController < ApplicationController
   end
 
   def show
-
+    @user = User.find(current_user.id)
     @mine = Mine.find(params[:id])
     # @posts = Post.find(params[:mine_id])
     # render json: @mine.to_json(:include =>  { :trips => {
