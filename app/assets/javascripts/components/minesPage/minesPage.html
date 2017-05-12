@@ -2,7 +2,7 @@
 <div class="align-center">
     <img src="https://image.ibb.co/iF13qk/cavern_Us_Logo_Sm.png">
 </div>
-<div class="text-center col-md-4 col-md-offset-4">
+<div class="text-center col-md-4 col-md-offset-4 transparent-box">
     <h1>Mines</h1>
     <h4>Mines can be almost anywhere. Below you'll find mines that have been added by users.
         These mines may be free user or may require a fee to dig there. Some mines may also only be open on certain dates.
@@ -19,7 +19,7 @@ data-target="#addMineModal">Add a New Mine</a>
 <!--Mine Card Area-->
 
 <div class="card-row card-deck">
-    <div class="card-area card-wide card-group col-md-8" ng-repeat="mine in $ctrl.mines">
+    <div class="card-area card-wide card-group col-md-8 transparent-box" ng-repeat="mine in $ctrl.mines">
         <div class="card user-card">
             <!--<img class="card-img-top" ng-src="{{user.avatar_url}}" alt="Card image cap">-->
             <div class="card-header">
@@ -68,43 +68,3 @@ data-target="#addMineModal">Add a New Mine</a>
     </div>
 </div>
 
-
-
-
-
-<!--<h1>CavernUs Mine Page</h1>-->
-<!--<hr>-->
-<!--<form>-->
-    <!--<label>Mine Name</label>-->
-    <!--<input ng-model="$ctrl.newMine.name" />-->
-    <!--<br/>-->
-
-    <!--<label>Mine Location</label>-->
-    <!--<input ng-model="$ctrl.newMine.address" />-->
-    <!--<br/>-->
-
-    <!--<label>Mine Description</label>-->
-    <!--<textarea ng-model="$ctrl.newMine.description"></textarea>-->
-    <!--<br/>-->
-
-    <!--<button ng-click="$ctrl.saveNewMine()">Create Mine</button>-->
-<!--</form>-->
-
-<!--<hr>-->
-
-<!--<div ng-repeat="mine in $ctrl.mines">-->
-    <!--Name: <a ui-sref="mineShow({ mineId: mine.id })">{{ mine.name }}</a>-->
-    <!--<br/>-->
-    <!--Description: {{ mine.description }}-->
-    <!--&lt;!&ndash;<p ng-repeat="post in mine.posts">&ndash;&gt;-->
-    <!--&lt;!&ndash;Posts: {{ post.title }}&ndash;&gt;-->
-    <!--&lt;!&ndash;</p>&ndash;&gt;-->
-    <!--&lt;!&ndash;<div ng-repeat="trip in mine.trips">&ndash;&gt;-->
-        <!--&lt;!&ndash;Trips: {{ trip.description }}&ndash;&gt;-->
-        <!--&lt;!&ndash;<div ng-repeat="member in trip.trip_members">&ndash;&gt;-->
-            <!--&lt;!&ndash;Hounds: {{ member }}&ndash;&gt;-->
-        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--<button ng-click="$ctrl.deleteMine(mine)">Delete Mine</button>-->
-    <!--<hr>-->
-<!--</div>-->

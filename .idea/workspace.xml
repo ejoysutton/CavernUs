@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ac572159-c9f5-47be-9ff5-6dc50fd739c2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/components/homePage/homePage.html" afterPath="$PROJECT_DIR$/app/assets/javascripts/components/homePage/homePage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.html.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/client_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/client_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/components/minesPage/minesPage.html" afterPath="$PROJECT_DIR$/app/assets/javascripts/components/minesPage/minesPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/components/profilePage/profilePage.html" afterPath="$PROJECT_DIR$/app/assets/javascripts/components/profilePage/profilePage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.html" afterPath="$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -38,61 +35,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mineShowPage.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.html.erb">
+      <file leaf-file-name="profilePage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/profilePage/profilePage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3683">
-              <caret line="9" column="50" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="50" />
+            <state relative-caret-position="1886">
+              <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mineShowPage.js.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.js.erb">
+      <file leaf-file-name="profilePage.js.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/profilePage/profilePage.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="40" column="65" lean-forward="false" selection-start-line="40" selection-start-column="65" selection-end-line="40" selection-end-column="65" />
+            <state relative-caret-position="690">
+              <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="40" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
+      <file leaf-file-name="userShowPage.js.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.js.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="161">
-              <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+              <caret line="7" column="57" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <file leaf-file-name="userShowPage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="client_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/client_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="42" />
+            <state relative-caret-position="69">
+              <caret line="3" column="64" lean-forward="false" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -101,18 +78,58 @@
       <file leaf-file-name="application.css.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="35" column="15" lean-forward="false" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+            <state relative-caret-position="460">
+              <caret line="41" column="16" lean-forward="false" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <file leaf-file-name="mineShowPage.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="78" column="8" lean-forward="false" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.json.jbuilder" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/api/mines/show.json.jbuilder">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="299">
-              <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+              <caret line="13" column="40" lean-forward="false" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="minesPage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/minesPage/minesPage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="736">
+              <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mineShowPage.js.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.js.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="45" column="25" lean-forward="true" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="529">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="40" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -145,7 +162,6 @@
         <option value="$PROJECT_DIR$/app/controllers/api/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/components/profilePage/profilePage.js.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.js.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.html" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPageEdit.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/services/minesService.js" />
@@ -159,33 +175,34 @@
         <option value="$PROJECT_DIR$/app/views/mines/show.json.builder" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/models/post.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/components/minesPage/minesPage.html" />
         <option value="$PROJECT_DIR$/app/controllers/api/trip_members_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/services/trip_membersService.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/services/postsService.js" />
         <option value="$PROJECT_DIR$/app/models/mine.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/underscore.js" />
-        <option value="$PROJECT_DIR$/app/views/api/mines/show.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/components/usersPage/usersPage.html" />
         <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/profile_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/api/profile/show.json.jbuilder" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.html" />
         <option value="$PROJECT_DIR$/app/views/client/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/components/profilePage/profilePage.html" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/controllers/api/mines_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/controllers/client_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/components/homePage/homePage.html" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.js.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.html.erb" />
         <option value="$USER_HOME$/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/devise-4.2.1/app/controllers/devise/registrations_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/registrations_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.js.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.html" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/components/profilePage/profilePage.html" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/components/minesPage/minesPage.html" />
+        <option value="$PROJECT_DIR$/app/views/api/mines/show.json.jbuilder" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.html.erb" />
       </list>
     </option>
   </component>
@@ -665,6 +682,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CavernUs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CavernUs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1183,7 +1226,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144830000" />
+    <option name="totallyTimeSpent" value="146462000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1246,20 +1289,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/services/minesService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1306,6 +1335,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
           <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1347,14 +1377,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/minesPage/minesPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/minesPage/minesPage.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -1374,6 +1396,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1418,14 +1441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/profilePage/profilePage.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/api/profile/show.json.jbuilder">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1459,30 +1474,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="22" column="141" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="141" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
-          <caret line="177" column="9" lean-forward="false" selection-start-line="177" selection-start-column="9" selection-end-line="177" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/profilePage/profilePage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/api/mines/show.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="32" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="8" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1545,30 +1536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="40" column="65" lean-forward="false" selection-start-line="40" selection-start-column="65" selection-end-line="40" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="35" column="15" lean-forward="false" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3683">
-          <caret line="9" column="50" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1627,8 +1594,88 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
+        <state relative-caret-position="529">
           <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="40" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/services/usersService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="45" column="25" lean-forward="true" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="57" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="41" column="16" lean-forward="false" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="64" lean-forward="false" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/profilePage/profilePage.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/profilePage/profilePage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1886">
+          <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/minesPage/minesPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/api/mines/show.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="40" lean-forward="false" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="78" column="8" lean-forward="false" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
           <folding />
         </state>
       </provider>
