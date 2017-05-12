@@ -5,6 +5,8 @@
   json.description @mine.description
   json.current_user @user.id
   json.id @mine.id
+  json.latitude @mine.latitude
+  json.longitude @mine.longitude
 
   json.posts @mine.posts do |post|
     json.title post.title

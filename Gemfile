@@ -38,6 +38,8 @@ gem 'devise-bootstrap-views'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails'
 
+gem 'geocoder'
+gem 'gmaps4rails'
 
 
 # Use Capistrano for deployment
