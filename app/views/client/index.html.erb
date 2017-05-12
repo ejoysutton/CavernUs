@@ -11,6 +11,8 @@
 
 <body ng-app="CavernUs">
 
+
+
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -34,7 +36,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/users">Users</a></li>
         <li><a href="/mines">Mines</a></li>
-        <li><a href="/trips">Trips</a></li>
+        <!--<li><a href="/trips">Trips</a></li>-->
         <% if user_signed_in? %>
             <%# link_to 'Edit account', edit_user_registration_path, target: '_self' %>
             <li><a href="/profile">Profile</a></li>
@@ -49,16 +51,18 @@
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
-
+<div id="wrap">
+  <div id="main" class="clear-top">
 
   <ui-view></ui-view>
-
-<footer class="text-center">
+  </div>
+</div>
+<footer class="text-center footer">
   <div class="footer-above">
     <div class="container">
       <div class="row">
         <div class="footer-col col-md-12">
-          <p>Link to Portfolio</p>
+          <p>Created by <a href="http://joysuttonportfolio.bitballoon.com/">Joy Sutton</a></p>
         </div>
       </div>
     </div>

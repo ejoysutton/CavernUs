@@ -26,6 +26,10 @@ function MineShowPageController($http, $state, $stateParams, minesService, posts
         mine_id: $stateParams.mineId
     };
     vm.newTripMember = { };
+    vm.mapMarker = {
+        coords: {
+        }
+    };
 //    vm.tripUsers = vm.mine.trips;
 
     vm.saveMine = saveMine;
@@ -34,12 +38,17 @@ function MineShowPageController($http, $state, $stateParams, minesService, posts
     vm.addMemberToTrip = addMemberToTrip;
     vm.removeMemberFromTrip = removeMemberFromTrip;
     vm.deletePost = deletePost;
+    vm.map = { center: { latitude: 45, longitude: -73 }, zoom: 14 };
 //    vm.initMap = initMap;
 //    vm.userInTrip = userInTrip;
 
 
     minesService.getMine($stateParams.mineId).then(function(resp) {
         vm.mine = resp.data;
+        vm.map.center.latitude = vm.mine.latitude;
+        vm.map.center.longitude = vm.mine.longitude;
+        vm.mapMarker.coords.latitude = vm.mine.latitude;
+        vm.mapMarker.coords.longitude = vm.mine.longitude;
     });
 
 //    function userInTrip(user) {

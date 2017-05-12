@@ -1,12 +1,126 @@
-<h1>CavernUs Profile Page</h1>
+<div class="transparent-box col-md-4 col-md-offset-4">
+    <div class="align-center">
+        <!--<img src="https://image.ibb.co/iF13qk/cavern_Us_Logo_Sm.png">-->
+    </div>
+    <div class="text-center">
+        <img class="avatar-img-full img-circle align-self-start" src="https://image.ibb.co/ns7FLk/profile.jpg" alt="profile" border="0">
+        <h2>{{ $ctrl.user.username }}</h2>
+        <h3>Location: {{ $ctrl.user.location }}</h3>
+        <h4>{{ $ctrl.user.bio }}
+        </h4>
 
-<p>Name: {{ $ctrl.user.username }}</p>
-<p>Location: {{ $ctrl.user.location }}</p>
-<p>Bio: {{ $ctrl.user.bio }}</p>
+    </div>
+</div>
+<div class="text-center col-md-4 col-md-offset-4">
+    <ul class="nav nav-pills">
+        <li class="active col-md-2 col-md-offset-4"><a href="#posts">Posts</a></li>
+        <li class="col-md-2"><a href="#trips">Trips</a></li>
+    </ul>
+</div>
+
+<div class="tab-content">
+    <div id="posts" class="tab-pane fade in active">
+        <!--Mine Posts-->
+        <div class="text-center col-md-4 col-md-offset-4">
+            <h3>Posts</h3>
+        </div>
+        <div class="card-row card-deck transparent-box">
+            <div class="card-area card-wide card-group col-md-8" ng-repeat="post in $ctrl.user.posts">
+                <div class="card user-card">
+                    <!--<img class="card-img-top" ng-src="{{user.avatar_url}}" alt="Card image cap">-->
+                    <div class="card-header">
+
+                        <!--<a ui-sref="userShow({ userId: user.id })" class="btn btn-primary align-self-end">View Mine</a>-->
+                    </div>
+                    <div class="card-block align-self-stretch">
+                        <h4 class="card-title">{{ post.title }}</h4>
+                        <p class="card-text">{{ post.username }}</p>
+                        <p class="card-text">{{ post.content }}</p>
+                        <button ng-show="post.user_id == $ctrl.user.current_user" ng-click="$ctrl.deletePost(post.id)">Delete Post</button>
+                        <!--<button ng-show="post.user_id == $ctrl.user.current_user">Edit Post</button>-->
+                        <!--<button type="button" class="btn btn-danger" ng-click="$ctrl.deleteMine(user)">Delete Mine</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="trips" class="tab-pane fade">
+        <!--Mine Trips-->
+        <div class="text-center col-md-4 col-md-offset-4">
+            <h3>Trips</h3>
+        </div>
+        <div class="card-row card-deck transparent-box">
+            <div class="card-area card-wide card-group col-md-8" ng-repeat="trip in $ctrl.user.trips">
+                <div class="card user-card">
+                    <!--<img class="card-img-top" ng-src="{{user.avatar_url}}" alt="Card image cap">-->
+                    <div class="card-header">
+                        <!--<a ui-sref="userShow({ userId: user.id })" class="btn btn-primary align-self-end">View Mine</a>-->
+                    </div>
+                    <div class="card-block align-self-stretch">
+                        <h4 class="card-title">{{ trip.date }}</h4>
+                        <p class="card-text">{{ trip.description }}</p>
+                        {{trip.id}}
+                        <button ng-click="$ctrl.addMemberToTrip(trip.id)">Join Trip</button>
+                        <hr>
+                        <div ng-repeat="user in trip.users">
+                            <p class="card-text">{{ user.username }}</p>
+                            <p class="card-text">{{ user.avatar_url }}</p>
+                            <button ng-click="$ctrl.removeMemberFromTrip(user.member_id)">Leave Trip</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
 
 
 
 
-<!-- {{ $ctrl.user }}
- -->
-{{ $ctrl.mines }}
+
+
+<!--Edit Post Modal-->
+
+<div class="modal fade" id="editPostModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 class="modal-title" id="myModalLabel">Edit This Post</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <label>Post Title</label>
+                    <input ng-model="$ctrl.newPost.title" />
+                    <br/>
+
+                    <label>Post Content</label>
+                    <input ng-model="$ctrl.newPost.content" />
+                    <br/>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default"  data-dismiss="modal" ng-click="$ctrl.saveNewPost()">Edit Post</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $(".nav-pills a").click(function(){
+            $(this).tab('show');
+        });
+        $('.nav-pills a').on('shown.bs.tab', function(event){
+            var x = $(event.target).text();         // active tab
+            var y = $(event.relatedTarget).text();  // previous tab
+            $(".act span").text(x);
+            $(".prev span").text(y);
+        });
+    });
+</script>

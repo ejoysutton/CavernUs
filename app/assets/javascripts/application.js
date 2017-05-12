@@ -12,17 +12,19 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require lodash/lodash
 //= require angular/angular
+//= require angular-simple-logger/dist/angular-simple-logger
 //= require angular-ui-router/release/angular-ui-router
+//= require angular-google-maps/dist/angular-google-maps
 //= require bootstrap-sprockets
-//= require gmaps/google
 //= require_self
 //= require_tree .
 
 
 // New routes for Angular
 angular
-    .module('CavernUs', ['ui.router'])
+    .module('CavernUs', ['ui.router', 'uiGmapgoogle-maps'])
     .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         // default fall back route
         $urlRouterProvider.otherwise('/');
@@ -61,5 +63,12 @@ angular
         $locationProvider.html5Mode({
             enabled: true,
             requireBase: false
+        });
+
+    })
+    .config(function(uiGmapGoogleMapApiProvider) {
+        uiGmapGoogleMapApiProvider.configure({
+            key: 'AIzaSyCMhSLrbp8JCSmx_P9r1NkgxdZbyXzA1T0'
+
         });
     });
