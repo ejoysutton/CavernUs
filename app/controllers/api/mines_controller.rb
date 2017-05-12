@@ -13,10 +13,8 @@ class Api::MinesController < ApplicationController
   def show
     @user = User.find(current_user.id)
     @mine = Mine.find(params[:id])
-    @hash = Gmaps4rails.build_markers(@mines) do |mine, marker|
-            marker.lat mine.latitude
-            marker.lng mine.longitude
-    end
+
+
     # @posts = Post.find(params[:mine_id])
     # render json: @mine.to_json(:include =>  { :trips => {
     #     :include =>  { :users => { :only => :username }
