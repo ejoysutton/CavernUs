@@ -1,43 +1,54 @@
-<h2>Sign up</h2>
+<div class="align-center">
+  <img src="https://image.ibb.co/iF13qk/cavern_Us_Logo_Sm.png">
+</div>
+<div class="base-container">
+  <h1>CavernUs</h1>
+  <h2>The social site for Rockhounds</h2>
+  <div class="splash-block">
+    <p>CavernUs is a site for rockhounds to post about their recent rockhounding trips, show off their specimens and create group trips. Check out the mines, view what others have said and join in to some trips to see what you can find!</p>
+    <hr>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+    <h2>Sign up</h2>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+        <div class="field">
+
+        <div class="field">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Sign up" %>
+        </div>
+    <% end %>
+
+
+    <a href="/users/sign_in">
+    <button type="button" class="btn btn-default">Log In</button>
+    </a>
+    <br/>
+    <!--<a href="/users/sign_up">-->
+      <!--<button type="button" class="btn btn-default">Sign Up</button>-->
+    <!--</a>-->
   </div>
-    <div class="field">
-      <%= f.label :username %><br />
-      <%= f.email_field :username, autofocus: true %>
-    </div>
+</div>
 
-    <div class="field">
-      <%= f.label :bio %><br />
-      <%= f.email_field :bio, autofocus: true %>
-    </div>
 
-    <div class="field">
-      <%= f.label :avatar_url %><br />
-      <%= f.email_field :avatar_url, autofocus: true %>
-    </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>

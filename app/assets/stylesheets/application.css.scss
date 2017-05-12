@@ -30,7 +30,11 @@ body {
   background-position: center;
 }
 
-.angular-google-map-container { height: 400px; }
+.angular-google-map-container {
+  height: 400px;
+  width: 80%;
+  margin: auto;
+}
 
 .transparent-box {
   background-color: rgba(255, 255, 255, 0.25);

@@ -94,8 +94,14 @@
 
     <div id="map" class="tab-pane fade in active">
       <!--Mine Posts-->
-      <p>Blah</p>
-      <ui-gmap-google-map center='$ctrl.map.center' zoom='$ctrl.map.zoom'></ui-gmap-google-map>
+      <br/>
+      <h3>{{$ctrl.mine.address}}</h3>
+      <ui-gmap-google-map center='$ctrl.map.center' zoom='$ctrl.map.zoom'>
+        <!--<ui-gmap-marker-->
+        <!--idKey='map.name'-->
+        <!--coords='mapMarker'-->
+        <!--&gt;</ui-gmap-marker>-->
+        </ui-gmap-marker></ui-gmap-google-map>
     </div>
 
 
