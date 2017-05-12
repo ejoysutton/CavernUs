@@ -76,7 +76,7 @@
       <div class="card-block align-self-stretch">
         <h4 class="card-title">{{ trip.date }}</h4>
         <p class="card-text">{{ trip.description }}</p>
-        
+
         <button ng-hide="trip.user.user_id == $ctrl.mine.current_user" ng-click="$ctrl.addMemberToTrip(trip.id)">Join Trip</button>
         <hr>
         <div ng-repeat="user in trip.users">
