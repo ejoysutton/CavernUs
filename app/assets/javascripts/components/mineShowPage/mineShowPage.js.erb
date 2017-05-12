@@ -5,9 +5,9 @@ angular
         controller: MineShowPageController
     });
 
-MineShowPageController.$inject = ['$http', '$state', '$stateParams', 'minesService', 'postsService', 'tripsService'];
+MineShowPageController.$inject = ['$http', '$state', '$stateParams', 'minesService', 'postsService', 'tripsService', 'tripMembersService'];
 
-function MineShowPageController($http, $state, $stateParams, minesService, postsService, tripsService) {
+function MineShowPageController($http, $state, $stateParams, minesService, postsService, tripsService, tripMembersService) {
     var vm = this;
 
     vm.message = "Let's rock!";
@@ -25,14 +25,28 @@ function MineShowPageController($http, $state, $stateParams, minesService, posts
         description: '',
         mine_id: $stateParams.mineId
     };
+    vm.newTripMember = { };
+//    vm.tripUsers = vm.mine.trips;
 
     vm.saveMine = saveMine;
     vm.saveNewPost = saveNewPost;
     vm.saveNewTrip = saveNewTrip;
+    vm.addMemberToTrip = addMemberToTrip;
+    vm.removeMemberFromTrip = removeMemberFromTrip;
+    vm.deletePost = deletePost;
+//    vm.userInTrip = userInTrip;
+
 
     minesService.getMine($stateParams.mineId).then(function(resp) {
         vm.mine = resp.data;
     });
+
+//    function userInTrip(user) {
+//            return user.user_id === mine.current_user;
+//        console.log(userInTrip.find('user_id'));
+//        }
+
+
 
     function saveMine() {
         minesService.updateMine(vm.mine).then(function(resp) {
@@ -69,6 +83,7 @@ function MineShowPageController($http, $state, $stateParams, minesService, posts
         });
     }
 
+
     function saveNewTrip() {
         tripsService.newTrip(vm.newTrip).then(function(resp) {
             console.log(vm.newTrip);
@@ -88,7 +103,43 @@ function MineShowPageController($http, $state, $stateParams, minesService, posts
         });
     }
 
-    function addMemberToTrip
+    function addMemberToTrip(trip_id) {
+        vm.newTripMember.user_id = vm.mine.current_user;
+        vm.newTripMember.trip_id = trip_id;
+        tripMembersService.newTripMember(vm.newTripMember).then(function(resp) {
+            console.log(vm.newTripMember);
+            if(resp.status == 201) {
+                $state.reload();
+            } else {
+                alert('There was an error while adding to this trip')
+            }
+        })
+
+    }
+
+    function removeMemberFromTrip(member_id) {
+        console.log();
+
+        tripMembersService.destroyTripMember(member_id).then(function(resp) {
+            console.log();
+            if(resp.status == 204) {
+                console.log(resp)
+                $state.reload();
+            } else {
+                alert('There was an error while deleting this trip')
+            }
+      })
+    }
+    function deletePost(post_id) {
+        postsService.destroyPost(post_id).then(function(resp) {
+            if(resp.status == 204) {
+                console.log(resp)
+                $state.reload();
+            } else {
+                alert('There was an error while deleting this post')
+            }
+        });
+    }
 
 
 
@@ -104,3 +155,14 @@ function MineShowPageController($http, $state, $stateParams, minesService, posts
 
 
 }
+$(document).ready(function(){
+    $(".nav-tabs a").click(function(){
+        $(this).tab('show');
+    });
+    $('.nav-tabs a').on('shown.bs.tab', function(event){
+        var x = $(event.target).text();         // active tab
+        var y = $(event.relatedTarget).text();  // previous tab
+        $(".act span").text(x);
+        $(".prev span").text(y);
+    });
+});

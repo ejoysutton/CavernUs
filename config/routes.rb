@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :posts, only: [:index, :show, :update, :create, :destroy]
     resources :trips, only: [:index, :show, :update, :create, :destroy]
     resources :profile, only: [:index, :show]
+    resources :trip_members, only: [:create, :destroy]
   end
 
   devise_for :users
