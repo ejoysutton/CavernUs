@@ -20,7 +20,25 @@
 
 body {
   padding-top: 50px;
+  background-image: image-url("crystal1.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
+.transparent-box {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  padding: 10px;
+
+}
+
+.avatar-img-full {
+  width: 200px;
 }
 
 .splash-block {
@@ -66,12 +84,12 @@ body {
 .card-small {
   background-color: lightgray;
   border-radius: 5px;
-  width: 200px;
+  width: 300px;
   //height: 300px;
   margin: 20px;
 
   .card-img-top {
-    width: 140px;
+    width: 70px;
     margin: 10px;
   }
   .btn {
@@ -162,4 +180,26 @@ body {
 
   }
 }
+
+html, body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow:auto;
+  padding-bottom:150px; /* this needs to be bigger than footer height*/
+}
+.footer {
+  position: relative;
+  margin-top: -100px; /* negative value of footer height */
+  height: 100px;
+  clear:both;
+  padding-top:20px;
+  background-color: white;
+}
+
 
