@@ -3,8 +3,8 @@ class Api::UsersController < ApplicationController
   # before_action :user_params, only: [:show]
   def show
     @user = User.find(params[:id])
-    render json: @user.to_json(:include =>  :posts )
-
+    # render json: @user.to_json(:include =>  :posts )
+    render formats: :json
   end
 
   def edit
