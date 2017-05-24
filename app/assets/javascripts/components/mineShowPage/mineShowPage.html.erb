@@ -67,7 +67,7 @@
   <h3>Trips</h3>
 </div>
 <div class="card-row card-deck transparent-box">
-  <div class="card-area card-wide card-group col-md-8" ng-repeat="trip in $ctrl.mine.trips">
+  <div class="card-area card-small card-group col-md-8" ng-repeat="trip in $ctrl.mine.trips">
     <div class="card user-card">
       <!--<img class="card-img-top" ng-src="{{user.avatar_url}}" alt="Card image cap">-->
       <div class="card-header">
@@ -75,13 +75,14 @@
       </div>
       <div class="card-block align-self-stretch">
         <h4 class="card-title">{{ trip.date }}</h4>
-        <p class="card-text">{{ trip.description }}</p>
+        <p class="card-text">{{ trip.name }}</p>
 
         <button ng-hide="trip.user.user_id == $ctrl.mine.current_user" ng-click="$ctrl.addMemberToTrip(trip.id)">Join Trip</button>
         <hr>
         <div ng-repeat="user in trip.users">
           <p class="card-text">{{ user.username }}</p>
-          <p class="card-text">{{ user.avatar_url }}</p>
+          <img class="card-img-top img-circle align-self-start" src="{{user.avatar_url}}" alt="profile" border="0">
+          <br>
           <button ng-show="user.user_id == $ctrl.mine.current_user" ng-click="$ctrl.removeMemberFromTrip(user.member_id)">Leave Trip</button>
         </div>
       </div>
