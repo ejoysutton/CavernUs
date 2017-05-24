@@ -194,7 +194,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
-  lodash-rails
+  lodash-rails (~> 4.17, >= 4.17.4)
   pg (~> 0.18)
   pry
   puma (~> 3.0)
