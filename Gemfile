@@ -40,6 +40,7 @@ gem 'autoprefixer-rails'
 
 gem 'geocoder'
 # gem 'gmaps4rails'
+gem 'lodash-rails'
 
 
 # Use Capistrano for deployment
