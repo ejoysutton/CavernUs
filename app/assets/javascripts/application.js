@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require lodash/lodash
 //= require jquery
 //= require jquery_ujs
 //= require angular/angular
@@ -17,7 +18,6 @@
 //= require angular-ui-router/release/angular-ui-router
 //= require angular-google-maps/dist/angular-google-maps
 //= require bootstrap-sprockets
-//= require lodash/lodash
 //= require_self
 //= require_tree .
 
