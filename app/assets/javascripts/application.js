@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require lodash/lodash
 //= require angular/angular
 //= require angular-simple-logger/dist/angular-simple-logger
 //= require angular-ui-router/release/angular-ui-router
