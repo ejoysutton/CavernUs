@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ac572159-c9f5-47be-9ff5-6dc50fd739c2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.html" afterPath="$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/users_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/api/users/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/api/users/show.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.html.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -38,18 +35,18 @@
       <file leaf-file-name="seeds.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
+            <state relative-caret-position="1035">
               <caret line="45" column="17" lean-forward="false" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userShowPage.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="userShowPage.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            <state relative-caret-position="437">
+              <caret line="28" column="103" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="103" />
               <folding />
             </state>
           </provider>
@@ -59,13 +56,13 @@
         <entry file="file://$PROJECT_DIR$/app/views/api/mines/show.json.jbuilder">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.json.jbuilder" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.json.jbuilder" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/api/users/show.json.jbuilder">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="713">
@@ -75,11 +72,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="mineShowPage.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1173">
+              <caret line="96" column="11" lean-forward="false" selection-start-line="96" selection-start-column="11" selection-end-line="96" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="mines_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/mines_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+              <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -109,7 +116,7 @@
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.js.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <marker date="1494607593309" expanded="true" signature="1592:1599" ph="{...}" />
               </folding>
@@ -188,13 +195,13 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/components/profilePage/profilePage.html" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/components/minesPage/minesPage.html" />
         <option value="$PROJECT_DIR$/app/views/api/mines/show.json.jbuilder" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.html.erb" />
         <option value="$PROJECT_DIR$/app/views/client/index.html.erb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.html" />
         <option value="$PROJECT_DIR$/app/controllers/api/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.js.erb" />
         <option value="$PROJECT_DIR$/app/views/api/users/show.json.jbuilder" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.html" />
       </list>
     </option>
   </component>
@@ -227,9 +234,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -660,6 +664,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -919,11 +926,12 @@
       <workItem from="1494377847543" duration="92000" />
       <workItem from="1494377966196" duration="34598000" />
       <workItem from="1494970995265" duration="3448000" />
+      <workItem from="1495423737948" duration="856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154160000" />
+    <option name="totallyTimeSpent" value="155016000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -936,6 +944,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2296875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1229,13 +1238,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="644">
@@ -1257,14 +1259,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/services/usersService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1276,7 +1270,7 @@
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <marker date="1494607593309" expanded="true" signature="1592:1599" ph="{...}" />
           </folding>
@@ -1286,15 +1280,7 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/api/mines_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="43" lean-forward="false" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+          <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1309,7 +1295,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
+        <state relative-caret-position="1035">
           <caret line="45" column="17" lean-forward="false" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
           <folding />
         </state>
@@ -1318,7 +1304,15 @@
     <entry file="file://$PROJECT_DIR$/app/views/api/mines/show.json.jbuilder">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/mineShowPage/mineShowPage.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="96" column="11" lean-forward="false" selection-start-line="96" selection-start-column="11" selection-end-line="96" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1327,6 +1321,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="713">
           <caret line="31" column="37" lean-forward="false" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="43" lean-forward="false" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/components/userShowPage/userShowPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="28" column="103" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="103" />
           <folding />
         </state>
       </provider>
