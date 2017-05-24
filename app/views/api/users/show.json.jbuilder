@@ -3,7 +3,8 @@
   json.username @user.username
   json.location @user.location
   json.bio @user.bio
-  # json.current_user @user.id
+  json.current_user current_user.id
+  json.avatar_url @user.avatar_url
   json.id @user.id
 
   json.posts @user.posts do |post|
@@ -30,6 +31,8 @@
 
       # json.
       json.username trip_member.user.username
+      json.member_id trip_member.user.id
+      json.avatar_url trip_member.user.avatar_url
     end
   end
 
